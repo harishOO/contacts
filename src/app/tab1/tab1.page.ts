@@ -12,4 +12,8 @@ export class Tab1Page {
     this.contacts = [{"name":"harish","num":"32423423424"},{"name":"harish","num":"32423423424"},{"name":"harish","num":"32423423424"},{"name":"harish","num":"32423423424"},{"name":"harish","num":"32423423424"},{"name":"harish","num":"32423423424"}]
   }
 
+  deleteRow(){
+    
+  }
+
 }

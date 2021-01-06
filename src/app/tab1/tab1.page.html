@@ -21,8 +21,12 @@
       <th>
         Contacts
       </th>
+      <th>
+        Actions
+      </th>
       <tr *ngFor="let data of contacts">
         {{data.name}} {{data.num}}
+        <button (click)="deleteRow()">Delete</button>
       </tr>
     </table>
   </div>

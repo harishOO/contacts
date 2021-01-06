@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  contacts :any;
+  constructor() {
+    this.contacts = [{"name":"harish","num":"32423423424"},{"name":"harish","num":"32423423424"},{"name":"harish","num":"32423423424"},{"name":"harish","num":"32423423424"},{"name":"harish","num":"32423423424"},{"name":"harish","num":"32423423424"}]
+  }
 
 }

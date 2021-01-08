@@ -22,4 +22,8 @@ export class Tab1Page {
   deleteContact(index) {
     this.contacts.splice(index,1)
   }
+
+  addContact(){
+    
+  }
 }

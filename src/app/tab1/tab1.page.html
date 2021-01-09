@@ -12,6 +12,25 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+  <form>
+    <ion-row class="sing_up ">
+      <ion-col size="4">
+        <ion-item>
+          <ion-input class="input" inputmode="text" placeholder="Name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4">
+        <ion-item>
+          <ion-input class="input" inputmode="text" placeholder="Number" [(ngModel)]="contact" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button (click)="addContact(name,contact)">
+          <ion-icon slot="icon-only" name="add"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
   <ion-card *ngFor="let data of contacts;let i = index">
     <ion-card-header>
       <ion-card-subtitle> {{data.name}}</ion-card-subtitle>

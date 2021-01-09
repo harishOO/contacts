@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: "app-tab1",
@@ -7,8 +8,7 @@ import { Component } from "@angular/core";
 })
 export class Tab1Page {
   contacts: any;
-  constructor() {
-    
+  constructor(public ac: AlertController) {
     this.contacts = [
       { name: "harish", num: "32423423424" },
       { name: "Soundarya", num: "134354546" },
@@ -20,10 +20,24 @@ export class Tab1Page {
   }
 
   deleteContact(index) {
-    this.contacts.splice(index,1)
+    this.contacts.splice(index, 1);
   }
 
-  addContact(){
-    
+  addContact(name, number) {
+    this.contacts.push({ name: name, num: number });
+     this.presentAlert();
   }
+
+  async presentAlert() {
+    
+    const alert = await this.ac.create({
+      cssClass: 'my-custom-class',
+      header: 'Alert',
+      message: 'Contact is added',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
 }
